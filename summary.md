@@ -86,3 +86,27 @@
  - TopSpin provided peak intensities
  - processing: ?????????????
 
+## Results and Discussion
+
+ - unlabeled aa renders it invisible in NMR
+ - then, by comparison with fully labeled sample, aatype assignments can be made
+ - however, scrambling introduces complications
+ - amount of scrambling depends on aatype and and atom (e.g. N vs. C)
+ - evaluated scrambling in E. coli BL21(DE3) using GB1
+ - approach for sequential assignments of aprataxin
+ - based on standard experiments -- making it easier to assess scrambling
+
+### Classification of amino acids based on amount 14N scrambling
+(questions: how could this fail?)
+ - assessed 14N scrambling for each aatype
+ - compared signal intensity of uniformly labeled GB1 to each specifically unlabeled sample
+ - for NHSQC, grouped by aatype, normalized and averaged
+ - determined amount of backbone-N scrambling for each aatype
+ - results in table 1
+   - Ala -> Val -- both distinguishable
+   - Gly -> Trp -- both distinguishable
+   - Trp -> everything -- nothing distinguishable
+   - Gln -> everything -- Gln still distinguishable
+   - Ile|Val|Leu -> Ile Val Leu -- one of group distinguishable
+   - Phe|Tyr -> Phe Tyr -- one of group distinguishable
+   - 
