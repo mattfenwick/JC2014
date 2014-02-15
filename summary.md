@@ -97,7 +97,7 @@
  - based on standard experiments -- making it easier to assess scrambling
 
 ### Classification of amino acids based on amount 14N scrambling
-(questions: how could this fail?)
+
  - assessed 14N scrambling for each aatype
  - compared signal intensity of uniformly labeled GB1 to each specifically unlabeled sample
  - for NHSQC, grouped by aatype, normalized and averaged
@@ -109,4 +109,38 @@
    - Gln -> everything -- Gln still distinguishable
    - Ile|Val|Leu -> Ile Val Leu -- one of group distinguishable
    - Phe|Tyr -> Phe Tyr -- one of group distinguishable
-   - 
+   - Asp|Glu|Ser|Trp -> everything
+ - confirms previous results
+
+### Classification of amino acids based on amount of 12C' scrambling
+
+ - specific unlabeling is different from specific labeling in experimental setup
+ - compared 20 specifically unlabeled HN(CO) spectra with fully labeled
+ - looked at peak intensities
+ - peak intensity also affected by N -- should have done 15N/12C labeling to isolate the effect.  but didn't :( -- out of scope
+ - only looked at C(i)/H-N(i+1) peaks for which signal was 80%+ of ... what???  of which the amide signal strength was 80%+ in the NHSQC?
+ - combining NHSQC and HN(CO) information, can determine N and C' labeling status
+ - not much C' scrambling going on
+
+### Backbone resonance assignment strategy
+
+ - can determine i and i+1 aatypes (sometimes) using above
+ - 5-step process
+   - find matches using HNCO and HN(CA)CO.
+     * what about HNCA?
+   - use NHSQC to get aatype(i)
+   - use NHSQC to get aatype(i-1) for all potential matches
+   - check aatype predictions against sequence
+   - check aatype(i-1) using HN(CO)
+ - maybe use HNCA, HNCACB or something
+ - got 78% of assignments
+ - missing ones: "highly unfavorable dynamics" of protein backbone
+ - BMRB 19182
+ - analyzed scrambling in aprataxin, got similar results to those in GB1
+ - Gly -> Cys, Ser -- which agrees with our understanding of bacteria metabolism
+
+## Summary
+
+ - N, C' scrambling in E. coli BL21(DE3)
+ - feasible strategy for including aatype in assignment process, when necessary, based on quality of data
+
